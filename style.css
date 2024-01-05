@@ -272,6 +272,15 @@ body, .container, .video-controls, .video-timer, .options{
   .options button span{
     font-size: 21px;
   }
+      .tit h1{
+    font-size: 15px;
+  }
+  .tit img{
+    width: 50px;
+    position: absolute;
+    left: 25%;
+    top:15px;
+  }
   .options .video-timer, .progress-area span, .speed-options li{
     font-size: 12px;
   }
