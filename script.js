@@ -29,6 +29,29 @@ container.addEventListener("mousemove", () => {
     hideControls();   
 });
 
+
+let mainVideoSources = mainVideo.querySelectorAll("source");
+for (let i = 0; i < mainVideoSources.length; i++) {
+  let videoUrl = mainVideoSources[i].src;
+  blobUrl(mainVideoSources[i], videoUrl);
+}
+function blobUrl(video, videoUrl) {
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://upload.sigma-academy.net/akotb/3/020.mp4");
+  xhr.responseType = "arraybuffer";
+  xhr.onload = (e) => {
+    let blob = new Blob([xhr.response]);
+    let url = URL.createObjectURL(blob);
+    video.src = url;
+  };
+  xhr.send();
+}
+
+mainVideo.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+});
+
+
 const formatTime = time => {
     let seconds = Math.floor(time % 60),
     minutes = Math.floor(time / 60) % 60,
@@ -119,6 +142,21 @@ fullScreenBtn.addEventListener("click", () => {
     fullScreenBtn.classList.replace("fa-expand", "fa-compress");
     container.requestFullscreen();
 });
+
+document.addEventListener('contextmenu', function (e){
+
+    'use strict';
+
+    e.preventDefault();
+
+    console.log('Ypu Clicked Right Click On Mouse')
+
+});
+
+
+
+  //  blob url
+
 
 speedBtn.addEventListener("click", () => speedOptions.classList.toggle("show"));
 pipBtn.addEventListener("click", () => mainVideo.requestPictureInPicture());
