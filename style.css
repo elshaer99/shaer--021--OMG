@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Comfortaa:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
 *{
     margin: 0;
@@ -17,7 +18,7 @@ body{
 
     background-image: linear-gradient(123deg  , #06314f, #5d5d5f , #2b5bc9);
     background-size: 600% 600% ;
-    animation: background-gradient 10s ease infinite;
+    animation: background-gradient 5s ease infinite;
     align-items: flex-end;
   }
   @keyframes background-gradient {
@@ -32,49 +33,51 @@ body{
     }
   }
   
-body, .container, .video-controls, .video-timer, .options{
+body, .container, .video-controls, .video-timer, .options {
   display: flex;
   align-items: center;
   justify-content: center;
 
 }
 .tit{
-    
     width: 100%;
-    height: 110vh;
-    top: 0;
-    left: 0;
+    height: 100vh;
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
-    padding: 30px 90px;
+    padding: 20px 0px;
     
 }
 .tit h1{
-    position: fixed;
+    position: absolute;
     color: #ffffff;
     right: 35%;
+    top: 35px;
     align-items: center;
     justify-content: center;    
+    font-family: 'Alkatra', system-ui;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: bolder;
 }
 .tit img{
   position: absolute;
   left: 30%;
-  top:5px;
+  top: 5px;
   width: 100px;
 
 }
 
 .container{
-    min-height: auto;
+    bottom: 50px;
+    height: auto;
     width: 98%;
     user-select: none;
     overflow: hidden;
     max-width: 700px;
-    border-radius: 5px;
+    border-radius: 10px;
     aspect-ratio: 16 / 9;
-    position: fixed;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    box-shadow: 30px 20px 30px rgba(0, 0, 0, 0.1);
 
 }
 .container.fullscreen{
@@ -255,9 +258,9 @@ body, .container, .video-controls, .video-timer, .options{
     display: none!important;
   }
   .options button{
-    height: 30px;
-    width: 30px;
-    font-size: 17px;
+    height: 15PX;
+    width: 15px;
+    font-size: 10PX;
   }
   .options .video-timer{
     margin-left: 5px;
@@ -267,22 +270,28 @@ body, .container, .video-controls, .video-timer, .options{
     margin: 0 2px;
   }
   .options button :where(i, span) {
-    line-height: 30px;
+    line-height: 15px;
   }
   .options button span{
-    font-size: 21px;
+    font-size: 15px;
   }
       .tit h1{
+    
+    top: 20%;
     font-size: 15px;
   }
   .tit img{
-    width: 50px;
+    width: 100px;
     position: absolute;
-    left: 25%;
-    top:15px;
+    left: 35%;
+    top:5%;
   }
+  .container{
+    top:50%;
+  }
+
   .options .video-timer, .progress-area span, .speed-options li{
-    font-size: 12px;
+    font-size: 10px;
   }
   .playback-content .speed-options{
     width: 75px;
