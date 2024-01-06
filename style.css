@@ -272,9 +272,9 @@ body, .container, .video-controls, .video-timer, .options {
   .options button span{
     font-size: 15px;
   }
-      .tit h1{
-    
+    .tit h1{
     top: 20%;
+    left: 10%;
     font-size: 15px;
     font-family: 'Rubik Maps', system-ui;
     font-weight: 100 ;  
@@ -282,7 +282,7 @@ body, .container, .video-controls, .video-timer, .options {
   .tit img{
     width: 100px;
     position: absolute;
-    left: 35%;
+    left: 10%;
     top:5%;
   }
   .container{
