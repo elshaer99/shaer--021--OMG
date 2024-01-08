@@ -13,9 +13,7 @@
 }
 
 body{
-
-    background-color: #0093E9;
-background-image: linear-gradient(120deg, #0093E9 0%, #80D0C7 100%);
+    background-image: linear-gradient(123deg  , #06314f, #5d5d5f , #2b5bc9);
     background-size: 600% 600% ;
     animation: background-gradient 5s ease infinite;
     align-items: flex-end;
